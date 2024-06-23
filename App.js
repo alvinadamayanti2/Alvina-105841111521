@@ -1,18 +1,26 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
+
 import React from 'react'
 const App = () => {
   return (
-    <View style= {{flex: 1}}>
-      <View style= {{flex: 1,flexDirection: 'row'}}>
-   <View style= {{flex: 1,backgroundColor:'green'}}></View>
-   <View style= {{flex: 1,backgroundColor:'yellow'}}></View>
-    </View>
-    <View style= {{flex: 1,flexDirection: 'colum'}}>
-   <View style= {{flex: 1,backgroundColor:'red'}}></View>
-   <View style= {{flex: 1,backgroundColor:'blue'}}></View>
-    </View>
-
+    <View style= {{
+      //justifycontent = baris
+      //alignitems = kolom
+      flex: 1,justifyContent:'flex-end', alignItems:'flex-end',
+    }}>
+      <View style={{
+        width: 100, height: 100, backgroundColor: 'blue',
+      }}>
+        <View style= {{
+          flex: 2,justifyContent:'flex-star', alignItems:'flex-star',
+        }}><View style={{
+          width: 100, height: 100, backgroundColor: 'red',
+        }}>
+          </View>
+          </View>
+      </View>
     </View>
   );
 }
+ 
 export default App
