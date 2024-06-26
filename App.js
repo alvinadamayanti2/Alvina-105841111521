@@ -1,15 +1,14 @@
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React from 'react';
-import ButtonComponent from './component/button/button'
 
 const App = () => {
   return (
     <View style={{
       flex: 1,
-      backgroundColor: '#000', // To blend with the background image
+      backgroundColor: '#000'
     }}>
-      <Image
-        source={require('./assets/shooping.jpg')}
+      <Image 
+        source={require('./assets/th.jpg')}
         style={{
           width: '100%',
           height: '100%',
@@ -19,72 +18,91 @@ const App = () => {
         }}
         resizeMode="cover"
       />
-      <ScrollView contentContainerStyle={{
-        flexGrow: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-      }}>
+      <ScrollView 
+        contentContainerStyle={{
+          flexGrow: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: 20,
+        }}
+      >
         <Image 
-          source={require('./assets/LogoNs.jpg')} 
+          source={require('./assets/tiktok.png')}
           style={{
-            width: 100,
-            height: 100,
-            marginTop: 50,
-            marginRight: 150,
+            width: 150,
+            height: 150,
+            marginTop: 10,
             opacity: 1,
             zIndex: 1,
-            borderRadius: 100,
           }}
         />
         <Text style={{
-          color: 'black',
-          fontSize: 28,
-          fontWeight: '300',
-          textAlign: 'center',
-          marginTop: 20,
-          fontWeight: 'bold'
+          fontSize: 20,
+          fontFamily: 'sans-serif',
+          fontWeight: 'bold',
+          color: 'white',
+          position: 'absolute',
+          top: 0,
+          marginTop: 320,
         }}>
-          Welcome To MyNs (Vinashoop) 
+          Selamat Datang di Tiktok
         </Text>
         <Text style={{
-          color: 'black',
-          fontSize: 15,
+          color: 'white',
+          fontSize: 18,
           textAlign: 'center',
-          marginTop: 20,
+          marginTop: 50,
         }}>
-          Untuk gadis-gadisku yang tersayang🌷shooping merupakan suatu hal yang populer dan sudah menjadi bagian dari hidup seorang wanita. Kali ini kami hadir untuk untuk membuat kalian semua tidak repot lagi dalam hal mencari barang-barang yang akan menjadi incaran gadis-gadis yang lain ceunahhhh🌷🛍.
+          Temukan video-video yang menarik dan lucu
         </Text>
         <Text style={{
-          color: 'black',
-          fontSize: 15,
+          color: 'white',
+          fontSize: 18,
           textAlign: 'center',
-          marginTop: 20,
+          marginTop: 10,
         }}>
-          Kami hadir dengan kualitas yang terbaik, ori, tercepat, dan 100% barang-barang kami limitid edition ceunahh🌷🛍
-        </Text>
-        <Text style={{
-          color: 'black',
-          fontSize: 15,
-          textAlign: 'center',
-          marginTop: 20,
-          marginBottom: 20,
-          fontWeight : 'bold'
-        }}>
-           "Cerita horor terpendek yang pernah ada: sold out💳💸"
+          Dan membuat anda bahagia
         </Text>
         <View style={{
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          marginBottom: 50,
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 20,
         }}>
-          <ButtonComponent title= "Sign In" color="blue" />
-          <ButtonComponent title= "Sign Up" color="tomato" />
+          <View style={{ marginHorizontal: 10 }}>
+            <Text style={{
+              width: 100,
+              height: 50,
+              color: 'white',
+              backgroundColor: 'red',
+              textAlign: 'center',
+              lineHeight: 50,
+              fontSize: 20,
+              borderRadius: 10,
+              marginTop: 80,
+            }}>
+              Login
+            </Text>
+          </View>
+          <View style={{ marginHorizontal: 10 }}>
+            <Text style={{
+              width: 100,
+              height: 50,
+              color: 'white',
+              backgroundColor: 'green',
+              textAlign: 'center',
+              lineHeight: 50,
+              fontSize: 20,
+              borderRadius: 10,
+              marginTop: 80,
+            }}>
+              Register
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </View>
   );
-};
+}
 
 export default App;
